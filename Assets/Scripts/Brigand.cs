@@ -52,4 +52,16 @@ public class Brigand : MonoBehaviour
             Instantiate(explosion, other.transform.position, other.transform.rotation);
         }
     }
+
+    public void TakeDammage(int dammage) {
+        hp = hp - dammage;
+        if (hp < 0)
+        {
+            Explode();
+        }
+    }
+    public void Explode()
+    {
+        Destroy(gameObject);
+    }
 }
