@@ -43,9 +43,13 @@ public class Brigand : MonoBehaviour
             hp--;
             if (hp == 0) {
                 Destroy(gameObject);
-            } 
-            Instantiate(explosion, other.transform.position, other.transform.rotation); // Creer une explosion
+            }
             other.transform.GetComponent<Asteroid>()?.Explode();
+            Instantiate(explosion, other.transform.position, other.transform.rotation); // Creer une explosion
+        }
+        if (other.CompareTag("Player")) {
+            other.transform.GetComponent<Player>()?.TakeDammage(1);
+            Instantiate(explosion, other.transform.position, other.transform.rotation);
         }
     }
 }

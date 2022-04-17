@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
     public float movementSpeed = 5f, rotationSpeed = 150f;
 
     public GameObject missile, canon;
+    public GameObject explosion;
+
+    public int hp = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void TakeDammage(int dammage) {
+        hp = hp - dammage;
+        if (hp < 0) { 
+            Explode();
+        }
+    }
   
 
     public void Explode()
