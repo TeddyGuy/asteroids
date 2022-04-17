@@ -7,6 +7,8 @@ public class Brigand : MonoBehaviour
     // Start is called before the first frame update
     public Player player;
     public float movementSpeed = 1f;
+    public GameObject explosion;
+    public int hp = 3;
     void Start()
     {
         Debug.Log("HAHAHA");
@@ -15,9 +17,10 @@ public class Brigand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        moveTowardsPlayer();
+    }
 
-       
-
+    private void moveTowardsPlayer(){
         Quaternion newRotation = Quaternion.LookRotation(player.transform.position - transform.position, Vector3.up);
 
         transform.rotation = new Quaternion(0, 0, newRotation.z, newRotation.w);
@@ -25,20 +28,24 @@ public class Brigand : MonoBehaviour
         {
             transform.Rotate(0, 0, -90);
         }
-        else {
+        else
+        {
             transform.Rotate(0, 0, 90);
         }
-        
-
-        Debug.Log(newRotation);
 
         transform.Translate(0, movementSpeed * Time.deltaTime, 0, Space.Self);
-
-       // Debug.Log(transform.position);
-        moveTowardsPlayer();
     }
 
-    private void moveTowardsPlayer(){
-        
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Asteroid"))
+        {
+            hp--;
+            if (hp == 0) {
+                Destroy(gameObject);
+            } 
+            Instantiate(explosion, other.transform.position, other.transform.rotation); // Creer une explosion
+            other.transform.GetComponent<Asteroid>()?.Explode();
+        }
     }
 }
