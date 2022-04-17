@@ -6,7 +6,7 @@ public class Brigand : MonoBehaviour
 {
     // Start is called before the first frame update
     public Player player;
-    public float movementSpeed = 5f, rotationSpeed = 150f;
+    public float movementSpeed = 1f;
     void Start()
     {
         Debug.Log("HAHAHA");
@@ -16,7 +16,7 @@ public class Brigand : MonoBehaviour
     void Update()
     {
 
-       // Debug.Log(transform.position);
+       
 
         Quaternion newRotation = Quaternion.LookRotation(player.transform.position - transform.position, Vector3.up);
 
@@ -32,7 +32,7 @@ public class Brigand : MonoBehaviour
 
         Debug.Log(newRotation);
 
-        //transform.Translate(0, movementSpeed * Time.deltaTime, 0, Space.Self);
+        transform.Translate(0, movementSpeed * Time.deltaTime, 0, Space.Self);
 
        // Debug.Log(transform.position);
         moveTowardsPlayer();
