@@ -43,4 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d79b1b4fd4a9447b496c741ec79167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bonus: {fileID: 3771724098790349935, guid: 426fab415e34c9d49a16f40ced34fc05, type: 3}
+  currentAmountOfBonus: 0
+  bonus: {fileID: -3813872565199322077, guid: 426fab415e34c9d49a16f40ced34fc05, type: 3}

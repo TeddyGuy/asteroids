@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class BonusManager : MonoBehaviour
 {
-    private int currentAmountOfBonus;
-    public GameObject Bonus;
+    public int currentAmountOfBonus = 0;
+    public Bonus bonus;
     // Start is called before the first frame update
     void Start()
     {
-        currentAmountOfBonus = 0; 
+        currentAmountOfBonus = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (currentAmountOfBonus < 1) {
+        while (currentAmountOfBonus < 1) {
             SpawnBonus();
             currentAmountOfBonus++;
         }
@@ -25,6 +25,13 @@ public class BonusManager : MonoBehaviour
         var newPos = transform.position;
         newPos.y = Random.Range(-5f, 5f);
         newPos.x = Random.Range(-9f, 9f);
-        Instantiate(Bonus,newPos,new Quaternion());
+        bonus.manager = this;
+        Instantiate(bonus.gameObject,newPos,new Quaternion());
+    }
+
+    public void BonusEaten() {
+        Debug.Log(currentAmountOfBonus);
+        currentAmountOfBonus--;
+        Debug.Log(currentAmountOfBonus);
     }
 }
