@@ -6,12 +6,14 @@ public class Tirailleur : MonoBehaviour
 {
     public Player player;
     public float movementSpeed = 1f;
+    public GameObject canon, missile;
     public GameObject explosion;
     public int hp = 3;
+    public float shootingInterval = 3f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("shoot",2.0f,shootingInterval);
     }
 
     // Update is called once per frame
@@ -39,7 +41,11 @@ public class Tirailleur : MonoBehaviour
             transform.Translate(0, movementSpeed * Time.deltaTime, 0, Space.Self);
         }
         else {
-            transform.Translate(0, -movementSpeed * Time.deltaTime, 0, Space.Self);
+            transform.Translate(0, -movementSpeed * 1.5f * Time.deltaTime, 0, Space.Self);
         }
+    }
+
+    private void shoot() {
+        Instantiate(missile, canon.transform.position, canon.transform.rotation);
     }
 }

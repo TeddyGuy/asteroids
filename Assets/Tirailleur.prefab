@@ -433,6 +433,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c340d7b885662074699f4ffbe59054a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 5069349101803621208, guid: f6509609e0a31f24a93244a1a6fa27cf, type: 3}
+  movementSpeed: 1
+  canon: {fileID: 8269054293560506608}
+  missile: {fileID: 2735180690616760460, guid: 556ed05b0c06cff47809c6e21e7802df, type: 3}
+  explosion: {fileID: 8003986732107205662, guid: 6a2d63b157353f44f85c32a27400f861, type: 3}
+  hp: 3
+  shootingInterval: 3
 --- !u!1 &4678964948836731576
 GameObject:
   m_ObjectHideFlags: 0
