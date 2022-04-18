@@ -43,6 +43,11 @@ public class Tirailleur : MonoBehaviour
         else {
             transform.Translate(0, -movementSpeed * 1.5f * Time.deltaTime, 0, Space.Self);
         }
+
+        var newPos = transform.position;
+        newPos.x = Mathf.Clamp(newPos.x, -9, 9);
+        newPos.y = Mathf.Clamp(newPos.y, -5, 5);
+        transform.position = newPos;
     }
 
     private void shoot() {

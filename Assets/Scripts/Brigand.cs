@@ -34,6 +34,11 @@ public class Brigand : MonoBehaviour
         }
 
         transform.Translate(0, movementSpeed * Time.deltaTime, 0, Space.Self);
+
+        var newPos = transform.position;
+        newPos.x = Mathf.Clamp(newPos.x, -9, 9);
+        newPos.y = Mathf.Clamp(newPos.y, -5, 5);
+        transform.position = newPos;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -48,7 +53,8 @@ public class Brigand : MonoBehaviour
             Instantiate(explosion, other.transform.position, other.transform.rotation); // Creer une explosion
         }
         if (other.CompareTag("Player")) {
-            other.transform.GetComponent<Player>()?.TakeDammage(1);
+            other.transform.GetComponent<Player>()?.TakeDammage(2);
+            Destroy(gameObject);
             Instantiate(explosion, other.transform.position, other.transform.rotation);
         }
     }
