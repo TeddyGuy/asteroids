@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5369600300785269429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8205222355633537825}
+  - component: {fileID: 4574561343575376638}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8205222355633537825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5369600300785269429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4574561343575376638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5369600300785269429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904879153de23c841b1bfe950fede680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeUntilEndOfLevel: 300
+  maxLevelOfAsteroids: 0
+  player: {fileID: 5069349101803621208, guid: f6509609e0a31f24a93244a1a6fa27cf, type: 3}
+  mediumAsteroid: {fileID: 281399215140782022, guid: 9a3b2dd607716994091a0fa5495a58a0, type: 3}
+  bigAsteroid: {fileID: 2094356833348547216, guid: a48b6d52e912ed64c8acdc2ebc2195e0, type: 3}
+  tirailleur: {fileID: -4068000246402379422, guid: 3ac586db183c37e4f849d06d607e0d55, type: 3}
+  brigands: {fileID: -7141056755375572270, guid: d1e6da7ec05fd4648842f164ff2e13df, type: 3}
+  timer: {fileID: -4883373132035411226, guid: e7e6f94bb7cf1b84ca5ca8c534e72a5b, type: 3}

@@ -8,14 +8,13 @@ public class Player : MonoBehaviour
 
     public GameObject missile, canon;
     public GameObject explosion;
-    private bool consummingABonus;
 
     public int hp = 5;
 
     // Start is called before the first frame update
     void Start()
     {
-        consummingABonus = false;   
+       
     }
 
     // Update is called once per frame
@@ -47,6 +46,7 @@ public class Player : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        Debug.Log("AYOO");
         if (other.CompareTag("Bonus")) {
                 Debug.Log("YUM");
                 Bonus bonus = other.transform.GetComponent<Bonus>();

@@ -7,6 +7,7 @@ TagManager:
   - Destructible
   - Asteroid
   - Brigand
+  - Bonus
   layers:
   - Default
   - TransparentFX
