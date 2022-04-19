@@ -9,6 +9,7 @@ public class Brigand : MonoBehaviour
     public float movementSpeed = 1f;
     public GameObject explosion;
     public int hp = 3;
+    public LevelManager levelManager;
     void Start()
     {
         Debug.Log("HAHAHA");
@@ -69,5 +70,6 @@ public class Brigand : MonoBehaviour
     public void Explode()
     {
         Destroy(gameObject);
+        levelManager.currentNumberOfAlienShip--;
     }
 }

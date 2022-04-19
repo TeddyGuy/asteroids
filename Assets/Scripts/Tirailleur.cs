@@ -10,6 +10,7 @@ public class Tirailleur : MonoBehaviour
     public GameObject explosion;
     public int hp = 3;
     public float shootingInterval = 3f;
+    public LevelManager levelManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,5 +53,19 @@ public class Tirailleur : MonoBehaviour
 
     private void shoot() {
         Instantiate(missile, canon.transform.position, canon.transform.rotation);
+    }
+
+    public void TakeDammage(int dammage)
+    {
+        hp = hp - dammage;
+        if (hp < 0)
+        {
+            Explode();
+        }
+    }
+    public void Explode()
+    {
+        Destroy(gameObject);
+        levelManager.currentNumberOfAlienShip--;
     }
 }

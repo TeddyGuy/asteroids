@@ -8,6 +8,7 @@ TagManager:
   - Asteroid
   - Brigand
   - Bonus
+  - Tirailleur
   layers:
   - Default
   - TransparentFX

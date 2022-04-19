@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: -4068000246402379422}
   m_Layer: 0
   m_Name: Tirailleur
-  m_TagString: Untagged
+  m_TagString: Tirailleur
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,7 +409,7 @@ Transform:
   m_GameObject: {fileID: 4520483752078743931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 7953570672360457747}
   - {fileID: 8796164340522604539}
@@ -440,6 +440,7 @@ MonoBehaviour:
   explosion: {fileID: 8003986732107205662, guid: 6a2d63b157353f44f85c32a27400f861, type: 3}
   hp: 3
   shootingInterval: 3
+  levelManager: {fileID: 0}
 --- !u!1 &4678964948836731576
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,10 +45,8 @@ public class Player : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("AYOO");
+    { 
         if (other.CompareTag("Bonus")) {
-                Debug.Log("YUM");
                 Bonus bonus = other.transform.GetComponent<Bonus>();
                 consume(bonus);
      
