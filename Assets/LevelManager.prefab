@@ -50,4 +50,4 @@ MonoBehaviour:
   bigAsteroid: {fileID: 2094356833348547216, guid: a48b6d52e912ed64c8acdc2ebc2195e0, type: 3}
   tirailleur: {fileID: -4068000246402379422, guid: 3ac586db183c37e4f849d06d607e0d55, type: 3}
   brigands: {fileID: -7141056755375572270, guid: d1e6da7ec05fd4648842f164ff2e13df, type: 3}
-  timer: {fileID: -4883373132035411226, guid: e7e6f94bb7cf1b84ca5ca8c534e72a5b, type: 3}
+  timerPrefab: {fileID: -4883373132035411226, guid: e7e6f94bb7cf1b84ca5ca8c534e72a5b, type: 3}
